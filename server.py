@@ -1,4 +1,3 @@
-# server.py
 import socket
 import struct
 import threading
@@ -81,7 +80,7 @@ class SpeedTestServer:
             # Connection tracking
             self.active_connections = 0
             self.connection_lock = Lock()
-            self.max_connections = 200  # Maximum concurrent connections
+            self.max_connections = 1000  # Maximum concurrent connections
 
             print(success(f"Server started, listening on IP address {highlight(self.server_ip)}"))
             print(info(f"TCP port: {self.tcp_port}, UDP port: {self.udp_port}"))

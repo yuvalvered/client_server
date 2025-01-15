@@ -83,7 +83,7 @@ class SpeedTestClient:
                     raise ValueError("Must have at least one connection")
 
                 # Add warning for large number of connections
-                if tcp_connections + udp_connections > 150:
+                if tcp_connections + udp_connections > 250:
                     print(warning("Warning: Large number of connections may impact performance"))
 
                 return file_size, tcp_connections, udp_connections
